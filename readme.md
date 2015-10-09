@@ -5,6 +5,8 @@ Scripts and data for our paper:
 An Empirical Study of Web Vulnerability Discovery Ecosystems.
 Mingyi Zhao, Jens Grossklags and Peng Liu, ACM Conference on Computer and Communications Security (CCS) 2015.
 
+Please contact us if you have any questions, comments or suggestions. Thank you!
+muz127@ist.psu.edu
 
 **Requirements**:
 
