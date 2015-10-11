@@ -1,0 +1,28 @@
+HackerOne,500,5000
+Yahoo,50
+InVision,100
+Slack,100,500,1000
+Coinbase,1000
+Mail.Ru,10000,5000,5000,500,150,500,150,300,3000,2000,2000,500,150,500,150
+Ian Dunn,25,100
+Twitter,10000,5000,2500,2500,1000,2500
+WePay,100
+WP API,50
+Sucuri,250,5000
+Square,300,500,1000,1000
+Greenhouse.io,100,1000
+Eobot,10
+Block.io,10
+QIWI,100
+Openfolio,50
+Vimeo,100
+Dropbox,216
+itBit Exchange,25
+Trello,64,256
+Romit,25,50,250
+GhostMail,20
+Whisper,30
+Ubiquiti Networks,100,25000
+Snapchat,100
+Shopify,500
+Coin.Space,10,25,50
