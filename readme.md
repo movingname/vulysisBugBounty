@@ -15,11 +15,11 @@ muz127@ist.psu.edu
 2. MongoDB
 
 
-**Bugs discovered in the paper**:
+**Paper Errata**:
 
 [1] In Table 1, we wrote that Facebook's bug bounty program does not disclose vulnerability reports.
 Well after submitting the camera-ready version of the paper, we found out that Facebook maintain a
-list of their vulnerability reports disclosed by white hats. So in a sense, Facebook does partially
+list of their vulnerability reports disclosed through white hats' blogs. So in a sense, Facebook does partially
 disclose reports.
 
 The link for Facebook vulnerability disclosure:
