@@ -21,16 +21,21 @@ import numpy as np
 from datetime import datetime
 from matplotlib.ticker import NullFormatter
 from operator import itemgetter
-from pymongo import Connection
+from pymongo import MongoClient
+from pandas import DataFrame
+
+
+translate = True
 
 matplotlib.rcParams['ps.useafm'] = True
 matplotlib.rcParams['pdf.use14corefonts'] = True
 matplotlib.rcParams['text.usetex'] = True
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 whitehat_reports = db.whitehat_reports
 corp_alexa = db.corp_alexa
+bug_type_translation = db.bug_type_translation
 
 fontSize = 14
 
@@ -113,6 +118,13 @@ for whitehat_report in whitehat_reports.find():
 
         corp = report['corp']
         bug_type = report['bug_type']
+
+        if translate:
+            translation = bug_type_translation.find_one({'Chinese': bug_type})
+            if translation != None:
+                bug_type = translation['English'].strip()
+                bug_type = libwooyun.mergeBugType(bug_type)
+                bug_type = libwooyun.shortenBugType(bug_type)
         
         if corp not in all_site:
             all_site.add(corp)
@@ -239,6 +251,14 @@ for whitehat_report in whitehat_reports.find():
                                 + str(wh_age[whitehat]) + "\n")
 
 wh_regression_file.close()
+
+
+df = DataFrame.from_dict(wh_type_dict).transpose()
+
+df.to_csv("../output/wh_type.csv")
+
+
+
 
 print("Alexa not found count: " + str(Alexa_not_found_count));
 print("Alexa found count: " + str(Alexa_found_count));

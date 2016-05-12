@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import operator
 from operator import itemgetter
-from pymongo import Connection
+from pymongo import MongoClient
 
 matplotlib.rcParams['ps.useafm'] = True
 matplotlib.rcParams['pdf.use14corefonts'] = True
@@ -46,7 +46,7 @@ month_interval = 3
 # Need to see the distribution and manually set this.
 cut_off_count = 60
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 bugs = db.bugs
 bug_type_translation = db.bug_type_translation

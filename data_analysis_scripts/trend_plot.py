@@ -4,7 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 from libwooyun import catStatType, stat_type
-from pymongo import Connection
+from pymongo import MongoClient
 import pylab
 
 matplotlib.rcParams['ps.useafm'] = True
@@ -42,7 +42,7 @@ month_interval = 3
 
 marker_freq = 3
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 bugs = db.bugs
 bug_type_translation = db.bug_type_translation

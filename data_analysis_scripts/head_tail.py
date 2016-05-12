@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import operator
 from libwooyun import alexa_levels, fit_powerlaw, last_skip_month, severities, sev_colors, shortenBugType, wh_black_list
-from pymongo import Connection
+from pymongo import MongoClient
 from operator import itemgetter
 
 matplotlib.rcParams['ps.useafm'] = True
@@ -23,7 +23,7 @@ fontSize = 18
 figWidth = 7
 figHeight = 5
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 whitehats = db.whitehats
 bugs = db.bugs

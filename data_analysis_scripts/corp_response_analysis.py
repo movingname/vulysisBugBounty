@@ -1,10 +1,10 @@
-from pymongo import Connection
+from pymongo import MongoClient
 import codecs
 import operator
 from datetime import datetime
 from libwooyun import alexa_levels, catStatType, stat_type
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 bugs = db.bugs
 corp_reports = db.corp_reports

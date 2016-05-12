@@ -1,4 +1,4 @@
-from pymongo import Connection
+from pymongo import MongoClient
 import codecs
 import operator
 import matplotlib
@@ -38,7 +38,7 @@ sector_full = {"edu":"Education", "gov":"Government", "finance":"Finance",
                "browser":"Browser", "hr":"HR", "office":"Office",
                "information":"Information"}
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 bugs = db.bugs
            

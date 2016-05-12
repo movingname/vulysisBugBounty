@@ -6,7 +6,7 @@ import operator
 from datetime import datetime
 from libwooyun import trendTest, corp_black_list, wh_black_list
 from operator import itemgetter
-from pymongo import Connection
+from pymongo import MongoClient
 from sklearn import linear_model
 from scipy.stats import pearsonr
 
@@ -39,7 +39,7 @@ f_top_corps = codecs.open("../data/top_corps.txt", 'w', 'utf-8')
 top_corps_translation = {"新浪":"Sina", "搜狐":"Sohu", "百度":"Baidu",
                          "腾讯":"Tencent", "中国电信":"China Telecom", "网易":"163"}
 
-con = Connection()
+con = MongoClient()
 db = con.wooyun_2
 bugs = db.bugs
 corp_reports = db.corp_reports
